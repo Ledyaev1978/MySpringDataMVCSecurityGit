@@ -8,11 +8,15 @@
     <h1>Begin page index opened !!! Menu products :</h1>
     <p>
     <td>
+        <a href="admin">Admin page only (restriction on the level method annotation  @PreAuthorize("hasRole('ROLE_ADMIN')"))</a>
+    </td>
+    <p>
+    <td>
         <a href="products">add product page</a>
     </td>
     <p>
     <td>
-        <a href="deleteproduct">deleteproduct open page</a>
+        <a href="deleteproduct">deleteproduct open page (only admin restriction on the level antMatchers class Security config)</a>
     </td>
     <p>
     <td>
