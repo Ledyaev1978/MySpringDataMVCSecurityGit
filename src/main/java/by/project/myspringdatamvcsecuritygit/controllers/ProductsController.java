@@ -3,7 +3,7 @@ package by.project.myspringdatamvcsecuritygit.controllers;
 
 import by.project.myspringdatamvcsecuritygit.models.Product;
 import by.project.myspringdatamvcsecuritygit.repositories.specifications.ProductSpecs;
-import by.project.myspringdatamvcsecuritygit.util.ProductsService;
+import by.project.myspringdatamvcsecuritygit.services.ProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
@@ -79,6 +79,7 @@ public class ProductsController {
         return "product-edit";
     }
 
+
     /*<p>
     <td>
         <a href=@{"/products/filtr"}>Filtr product element</a>
@@ -134,7 +135,8 @@ public class ProductsController {
 
     @GetMapping("/show/{id}")
     public String showOneProduct(Model model, @PathVariable(value = "id") Long id) {
-        Optional<Product> product = productsService.getIById(id); //getById(id);
+        Optional<Product> optionalProduct = productsService.getIById(id); //getById(id);
+        Product product =  optionalProduct.get();
         model.addAttribute("product", product) ;
         return "product-page";
     }

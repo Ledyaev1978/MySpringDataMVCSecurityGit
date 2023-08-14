@@ -25,14 +25,14 @@
       <td th:text="${product.title}"/>
       <td th:text="${product.price}"/>
       <td>
-        <a th:href="@{'/products/show/' + ${product.id}}" th:text="Просмотреть"/>
+        <a th:href="@{'/show/' + ${product.id}}" th:text="Просмотреть"/>
       </td>
     </tr>
     </tbody>
   </table>
   <span th:text="${'Всего товаров ' + products.size()}"/>
   <br>
-  <form th:action="@{/products/{productid}/delete${product.id}}"
+  <form th:action="@{/{productid}/delete${product.id}}"
         th:object="${product}" method="post" class="form-horizontal">
 
     <div style="margin-bottom: 25px" class="input-group">

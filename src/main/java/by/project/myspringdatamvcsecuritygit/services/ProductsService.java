@@ -1,4 +1,4 @@
-package by.project.myspringdatamvcsecuritygit.util;
+package by.project.myspringdatamvcsecuritygit.services;
 
 import by.project.myspringdatamvcsecuritygit.models.Product;
 import by.project.myspringdatamvcsecuritygit.repositories.IProductREpository;

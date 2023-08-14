@@ -12,7 +12,7 @@
 <div class="container">
     <h3 th:text="${(product.id ==0)?'Add product':'Edit product'}"></h3>
     <br>
-    <form th:action="@{/products/edit}"
+    <form th:action="@{/edit}"
           th:object="${product}" method="post" class="form-horizontal">
 
         <div style="margin-bottom: 25px" class="input-group">
