@@ -53,8 +53,8 @@
       <td th:text="${product.title}"/>
       <td th:text="${product.price}"/>
       <td>
-        <a th:href="@{'/products/show/'   + ${product.id}}" th:text="Просмотреть"/>
-        <a th:href="@{'/products/delete/' + ${product.id}}" th:text="Удалить"/>
+        <a th:href="@{'/show/'   + ${product.id}}" th:text="Просмотреть"/>
+        <a th:href="@{'/delete/' + ${product.id}}" th:text="Удалить"/>
       </td>
     </tr>
     </tbody>
