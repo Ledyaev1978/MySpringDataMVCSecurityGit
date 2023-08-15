@@ -133,11 +133,6 @@ public class ProductsController {
         return  "redirect:/deleteproduct";//"redirect:/products";
     }
 
-    @GetMapping ("/delete")
-    public String deletewithoutid(@PathVariable("id") Long id){
-        productsService.deleteProductdb(id);//deleteProduct(product);
-        return "redirect:/products";
-    }
 
     @GetMapping("/show/{id}")
     public String showOneProduct(Model model, @PathVariable(value = "id") Long id) {
