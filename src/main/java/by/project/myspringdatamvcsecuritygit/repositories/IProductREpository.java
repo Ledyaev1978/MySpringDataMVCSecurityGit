@@ -16,4 +16,6 @@ public interface IProductREpository extends JpaSpecificationExecutor <Product> ,
                                             PagingAndSortingRepository <Product,Long>,
                                             JpaRepository <Product,Long> {
     List<Product> findByTitle(String title);
+
+
 }

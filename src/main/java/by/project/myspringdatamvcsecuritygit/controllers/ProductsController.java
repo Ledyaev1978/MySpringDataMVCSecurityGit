@@ -129,6 +129,12 @@ public class ProductsController {
 
     @GetMapping ("/delete/{id}")
     public String delete(@PathVariable("id") Long id){
+        productsService.deleteProductdb(id); //deleteProduct(product);
+        return  "redirect:/deleteproduct";//"redirect:/products";
+    }
+
+    @GetMapping ("/delete")
+    public String deletewithoutid(@PathVariable("id") Long id){
         productsService.deleteProductdb(id);//deleteProduct(product);
         return "redirect:/products";
     }
